@@ -1,0 +1,38 @@
+{
+  "id": "sarajevo-alerts",
+  "name": "Status Šehera",
+  "version": "0.1.0",
+  "description": "Nestanci struje, vode i grijanja te izmjene saobraćaja u Sarajevu, po naseljima, uz obavještenja za ulice i naselja koja odaberete.",
+  "entry": "index.jsx",
+  "icon": "icon.png",
+  "offline_capable": false,
+  "permissions": {},
+  "schedule": {
+    "default": "*/30 * * * *",
+    "user_configurable": false,
+    "job": "fetch.py"
+  },
+  "source_files": [
+    "domain.js",
+    "theme.js",
+    "hoods.js",
+    "hoods.json",
+    "build_hoods.py"
+  ],
+  "store": {
+    "tagline": "Nestanci struje, vode i grijanja te izmjene saobraćaja u Sarajevu — po vašim naseljima.",
+    "description": "Status Šehera na jednom mjestu prikazuje nestanke struje, vode i grijanja te izmjene u saobraćaju u Sarajevu. Obavještenja se automatski prikupljaju svakih pola sata iz zvaničnih izvora — Elektroprivrede BiH, ViK-a, GRAS-a i BIHAMK-a — te iz lokalnih vijesti, i razvrstavaju po naseljima i ulicama.\n\nPod „Moja mjesta“ dodate svoju ulicu, naselje ili cijelu općinu i izaberete šta vas zanima (struja, voda, grijanje, saobraćaj). Kad se novo upozorenje odnosi na neko od vaših mjesta, dobijete obavještenje na telefon — svako samo jednom.\n\nZa koga je: svako ko živi ili radi u Sarajevu i želi na vrijeme znati kad nestaje struja ili voda, kad počinje grijna sezona ili kad se mijenja trasa prevoza.\n\nPrivatnost: mjesta koja pratite i vaša podešavanja ostaju samo na vašem Möbiusu. Aplikacija ne dijeli vaše podatke i ne traži nalog ni prijavu.",
+    "screenshots": [
+      {
+        "src": "static/store/notices.png",
+        "alt": "Pregled obavještenja: pločice za struju, vodu, grijanje i saobraćaj s brojem aktivnih upozorenja i kartice s nestancima po naseljima.",
+        "label": "Sva obavještenja na jednom mjestu"
+      },
+      {
+        "src": "static/store/places.png",
+        "alt": "Ekran „Moja mjesta“: forma za dodavanje ulice ili naselja i lista praćenih mjesta s odabranim vrstama obavještenja.",
+        "label": "Pratite svoja mjesta"
+      }
+    ]
+  }
+}
